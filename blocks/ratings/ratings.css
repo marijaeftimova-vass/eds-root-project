@@ -44,7 +44,7 @@
 
     .rating-stars {
       .star-active::before {
-        content: url("../../icons/search.svg");
+        content: url("../../icons/star-full.svg");
         fill: var(--light-color);
       }
 
