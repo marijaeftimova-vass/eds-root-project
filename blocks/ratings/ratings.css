@@ -1,0 +1,27 @@
+.ratings {
+  display: flex;
+}
+
+.ratings > .rating {
+  border: 1px solid gray;
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+  width: 600px;
+}
+
+.ratings .ratings-rating-image {
+
+}
+
+.ratings .ratings-rating-review {
+
+}
+
+.ratings .ratings-rating-review .quote {
+
+}
+
+.ratings .ratings-rating-review [class^="ratingStars-"] {
+
+}
