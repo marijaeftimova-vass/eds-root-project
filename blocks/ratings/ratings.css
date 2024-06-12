@@ -42,10 +42,12 @@
       display: block;
     }
 
-    .ratingStars {
+    .rating-stars {
       .star-active::before {
-        content: url("../../icons/star-full.svg");
+        content: url("../../icons/search.svg");
+        fill: var(--light-color);
       }
+
       .star-inactive::before {
         content: url("../../icons/star-empty.svg");
       }

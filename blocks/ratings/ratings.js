@@ -18,28 +18,26 @@ function isQuoteElement(element) {
 function decorateImage(ratingImageContainer) {
   ratingImageContainer.classList.add('ratings-rating-image');
 
-  ratingImageContainer.querySelectorAll('img').forEach(
-    (img) => img.closest('picture')
-      .replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]))
-  );
+  ratingImageContainer.querySelectorAll('img').forEach((img) => {
+    img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]));
+  });
 }
 
 function decorateReview(ratingReviewContainer) {
   ratingReviewContainer.classList.add('ratings-rating-review');
 
   [...ratingReviewContainer.children].forEach((reviewChild) => {
-
-    if(isQuoteElement(reviewChild)) {
+    if (isQuoteElement(reviewChild)) {
       reviewChild.classList.add('quote');
     }
 
-    const ratingCount = isRatingElement(reviewChild)
-    if(ratingCount != null) {
+    const ratingCount = isRatingElement(reviewChild);
+    if (ratingCount != null) {
       reviewChild.textContent = '';
 
-      reviewChild.classList.add('ratingStars');
+      reviewChild.classList.add('rating-stars');
 
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 5; i += 1) {
         const star = document.createElement('span');
 
         if (i < ratingCount) {
@@ -60,6 +58,5 @@ export default function decorate(block) {
 
     decorateImage(rating.children[0]);
     decorateReview(rating.children[1]);
-
   });
 }
