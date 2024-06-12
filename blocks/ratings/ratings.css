@@ -1,27 +1,54 @@
 .ratings {
   display: flex;
-}
-
-.ratings > .rating {
-  border: 1px solid gray;
-  display: flex;
   gap: 32px;
-  padding: 32px;
-  width: 600px;
-}
+  padding: 16px;
+  overflow-x: scroll;
+  background-color: var(--light-color);
 
-.ratings .ratings-rating-image {
+  > .rating {
+    flex: 1 0 auto;
+    display: flex;
+    gap: 32px;
+    padding: 32px;
+    width: 300px;
+    flex-direction: column;
+    background-color: var(--background-color);
 
-}
+    @media (width >= 900px) {
+      width: 600px;
+      flex-direction: row;
+    }
+  }
 
-.ratings .ratings-rating-review {
+  .ratings-rating-image {
+    flex: 1 0 calc(40% - 64px);
 
-}
+    img {
+      border-radius: 50%;
+    }
+  }
 
-.ratings .ratings-rating-review .quote {
+  .ratings-rating-review {
+    flex: 1 0 calc(60% - 64px);
 
-}
+    .quote em::before {
+      content: "\201C";
+      font-size: var(--heading-font-size-l);
+      color: var(--link-hover-color);
+      position: relative;
+      left: -20px;
+      height: 20px;
+      width: 20px;
+      display: block;
+    }
 
-.ratings .ratings-rating-review [class^="ratingStars-"] {
-
+    .ratingStars {
+      .star-active::before {
+        content: url("../../icons/star-full.svg");
+      }
+      .star-inactive::before {
+        content: url("../../icons/star-empty.svg");
+      }
+    }
+  }
 }
