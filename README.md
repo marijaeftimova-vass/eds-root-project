@@ -1,5 +1,5 @@
-# Your Project's Title...
-Your project's description...
+# Aniless Website
+Training project for the Adobe Experience Manager Edge Delivery System. The project is a website for a fictional app called Aniless that should motivate people to consume less animal products. 
 
 ## Environments
 - Preview: https://main--aem-eds-demo-aniless--LikoDevelopment.hlx.page/
