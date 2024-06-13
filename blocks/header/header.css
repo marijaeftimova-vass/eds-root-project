@@ -170,7 +170,7 @@ header nav[aria-expanded='true'] .nav-sections {
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
-  font-size: var(--body-font-size-s);
+  font-size: var(--heading-font-size-xs);
   font-weight: 500;
 }
 
@@ -227,7 +227,7 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     gap: 2em;
     margin: 0;
-    font-size: var(--body-font-size-xs);
+    font-size: var(--heading-font-size-xs);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {

@@ -29,3 +29,13 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards .card-tag {
+  color: var(--text-light-color);
+  background-color: var(--darkest-color);
+  padding: 6px 12px;
+}
+
+.cards .card-tag-wrapper {
+  display: inline;
+}

@@ -19,15 +19,19 @@
   --dark-color: #BFAE95;
   --text-color: black;
 
+  /* custom colors */
+  --text-light-color: #F8F1E7;
+  --darkest-color: #5C5249;
+
   /* fonts */
   --body-font-family: 'Nunito-VariableFont_wght';
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
@@ -35,7 +39,7 @@
   --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
+  --heading-font-size-xs: 16px;
 
   /* nav height */
   --nav-height: 64px;
@@ -55,7 +59,7 @@
     --heading-font-size-l: 36px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;
+    --heading-font-size-xs: 18px;
   }
 }
 
@@ -223,6 +227,11 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+main .section.dark {
+  color: var(--text-light-color);
+  background-color: var(--darkest-color);
 }
 
 main .section.centered .default-content-wrapper {
