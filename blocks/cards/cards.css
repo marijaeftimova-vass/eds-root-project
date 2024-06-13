@@ -8,8 +8,8 @@
 }
 
 .cards > ul > li {
-  border: 1px solid var(--dark-color);
   background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
 }
 
 .cards .cards-card-body {
@@ -28,4 +28,14 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards .card-tag {
+  color: var(--text-light-color);
+  background-color: var(--darkest-color);
+  padding: 6px 12px;
+}
+
+.cards .card-tag-wrapper {
+  display: inline;
 }
