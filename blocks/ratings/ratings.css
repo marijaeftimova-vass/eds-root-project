@@ -10,9 +10,10 @@
     display: flex;
     gap: 32px;
     padding: 32px;
-    width: 300px;
+    width: 200px;
     flex-direction: column;
     background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
 
     @media (width >= 900px) {
       width: 600px;
@@ -21,15 +22,19 @@
   }
 
   .ratings-rating-image {
-    flex: 1 0 calc(40% - 64px);
-
     img {
       border-radius: 50%;
+    }
+
+    @media (width >= 900px) {
+      flex: 1 0 calc(40% - 64px);
     }
   }
 
   .ratings-rating-review {
-    flex: 1 0 calc(60% - 64px);
+    @media (width >= 900px) {
+      flex: 1 0 calc(60% - 64px);
+    }
 
     .quote em::before {
       content: "\201C";
