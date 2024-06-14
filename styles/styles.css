@@ -12,8 +12,8 @@
 
 :root {
   /* colors */
-  --link-color: #9D5B44;
-  --link-hover-color: #F49372;
+  --link-color: #5C5249;
+  --link-hover-color: #9D5B44;
   --background-color: #F8F1E7;
   --light-color: #F0E6D8;
   --dark-color: #BFAE95;
@@ -41,6 +41,7 @@
   --nav-height: 64px;
 
   /* custom colors */
+  --accent-color: #F49372;
   --text-light-color: #F8F1E7;
   --darkest-color: #5C5249;
 
@@ -238,6 +239,15 @@ main .section.highlight {
 main .section.dark {
   color: var(--text-light-color);
   background-color: var(--darkest-color);
+
+  a.button:any-link,
+  button {
+    background-color: var(--link-hover-color);
+
+    &:hover {
+      background-color: var(--accent-color);
+    }
+  }
 }
 
 main .section.centered .default-content-wrapper {
