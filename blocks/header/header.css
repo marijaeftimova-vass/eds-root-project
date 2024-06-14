@@ -148,8 +148,14 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  display: none;
+
+  @media (width >= 900px) {
+    display: block;
+    width: 64px;
+    margin-top: 24px;
+    height: auto;
+  }
 }
 
 /* sections */
