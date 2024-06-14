@@ -10,6 +10,7 @@
 .cards > ul > li {
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
 }
 
 .cards .cards-card-body {
@@ -28,12 +29,15 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 .cards .card-tag {
   color: var(--text-light-color);
   background-color: var(--darkest-color);
   padding: 6px 12px;
+  border-radius: var(--border-radius);
 }
 
 .cards .card-tag-wrapper {

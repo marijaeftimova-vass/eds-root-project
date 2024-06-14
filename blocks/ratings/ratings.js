@@ -1,4 +1,4 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
+import { createOptimizedPicture, fetchPlaceholders } from '../../scripts/aem.js';
 
 function getRatingValue(regex, content) {
   const matchForFirstNumber = content.match(regex);
@@ -45,6 +45,16 @@ function decorateImage(ratingImageContainer) {
   });
 }
 
+async function setupRatingText(element) {
+  const placeholders = await fetchPlaceholders();
+  const { rating } = placeholders;
+
+  const infoText = document.createElement('span');
+  infoText.textContent = rating;
+  infoText.classList.add('rating-info');
+  element.appendChild(infoText);
+}
+
 function decorateReview(ratingReviewContainer) {
   ratingReviewContainer.classList.add('ratings-rating-review');
 
@@ -78,6 +88,7 @@ export default function decorate(block) {
   [...block.children].forEach((rating) => {
     rating.classList.add('rating');
 
+    setupRatingText(rating);
     decorateImage(rating.children[0]);
     decorateReview(rating.children[1]);
   });
