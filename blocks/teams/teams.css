@@ -1,0 +1,42 @@
+.teams {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.team {
+  position: relative;
+  background-color: #F7F7F7;
+  padding: 2rem;
+  width: 400px;
+  min-height: 300px;
+  border-bottom: 2px solid #EBEBEB;
+}
+
+.team__title {
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+.team__members-title {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: solid 1px #EBEBEB;
+}
+
+.team__members {
+  clear: both;
+}
+
+.team__member {
+  margin-bottom: 0.5rem;
+}
+
+.team__description {
+  color: black;
+}
+
+.team__members-title {
+  color: black;
+}
