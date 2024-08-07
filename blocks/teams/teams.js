@@ -15,7 +15,7 @@ const createErrorElement = (errorMessage) => {
 
 const createTeamMemberElement = (teamMember) => {
   const li = document.createElement('li');
-  li.className = 'team__member';
+  li.className = 'team-member';
 
   const link = document.createElement('a');
   link.href = redirectURL(teamMember.fullName);
@@ -34,19 +34,19 @@ const createTeamElement = (team) => {
   teamDiv.className = 'team';
 
   const titleH2 = document.createElement('h2');
-  titleH2.className = 'team__title';
+  titleH2.className = 'team-title';
   titleH2.textContent = team.title;
 
   const descriptionP = document.createElement('p');
-  descriptionP.className = 'team__description';
+  descriptionP.className = 'team-description';
   descriptionP.textContent = team.description?.plaintext || '';
 
   const membersTitleH4 = document.createElement('h4');
-  membersTitleH4.className = 'team__members-title';
+  membersTitleH4.className = 'team-members-title';
   membersTitleH4.textContent = 'Members';
 
   const membersUl = document.createElement('ul');
-  membersUl.className = 'team__members';
+  membersUl.className = 'team-members';
 
   team.teamMembers.forEach((teamMember) => {
     membersUl.appendChild(createTeamMemberElement(teamMember));

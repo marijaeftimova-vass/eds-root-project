@@ -14,26 +14,26 @@
   border-bottom: 2px solid #EBEBEB;
 }
 
-.team__title {
+.team-title {
   margin-bottom: 1.5rem;
   color: black;
 }
 
-.team__members-title {
+.team-members-title {
   color: black;
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: solid 1px #EBEBEB;
 }
 
-.team__members {
+.team-members {
   clear: both;
 }
 
-.team__member {
+.team-member {
   margin-bottom: 0.5rem;
 }
 
-.team__description {
+.team-description {
   color: black;
 }

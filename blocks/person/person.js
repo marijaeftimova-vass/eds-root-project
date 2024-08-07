@@ -17,7 +17,7 @@ function createErrorElement(errorMessage) {
 
 function createPersonImageElement(person) {
   const img = document.createElement('img');
-  img.className = 'person__image';
+  img.className = 'person-image';
   // eslint-disable-next-line no-underscore-dangle
   img.src = `${BASE_URL}${person.profilePicture._path}`;
   img.alt = `${person.fullName} profile picture`;
@@ -26,11 +26,11 @@ function createPersonImageElement(person) {
 
 function createPersonOccupationElement(person) {
   const occupationsDiv = document.createElement('div');
-  occupationsDiv.className = 'person__occupations';
+  occupationsDiv.className = 'person-occupations';
 
   person.occupation.forEach((occupation) => {
     const span = document.createElement('span');
-    span.className = 'person__occupation';
+    span.className = 'person-occupation';
     span.textContent = occupation;
     occupationsDiv.appendChild(span);
   });
@@ -40,15 +40,15 @@ function createPersonOccupationElement(person) {
 
 function createPersonContentElement(person) {
   const contentDiv = document.createElement('div');
-  contentDiv.className = 'person__content';
+  contentDiv.className = 'person-content';
 
   const fullNameH1 = document.createElement('h1');
-  fullNameH1.className = 'person__full-name';
+  fullNameH1.className = 'person-full-name';
   fullNameH1.textContent = person.fullName;
   contentDiv.appendChild(fullNameH1);
 
   const biographyDiv = document.createElement('div');
-  biographyDiv.className = 'person__biography';
+  biographyDiv.className = 'person-biography';
   const fragment = mapJsonRichText(person.biographyText.json);
   biographyDiv.appendChild(fragment);
   contentDiv.appendChild(biographyDiv);

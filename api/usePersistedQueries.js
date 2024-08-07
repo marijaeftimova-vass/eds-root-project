@@ -10,7 +10,6 @@ async function fetchData(url, options = {}) {
 
     return { data: await response.json(), err: null };
   } catch (e) {
-    console.error(e);
     return { data: null, err: e.message };
   }
 }
