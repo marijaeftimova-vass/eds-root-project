@@ -26,7 +26,7 @@
 }
 
 .person__content {
-  margin: -9rem 10% 0 10%;
+  margin: -9rem 10% 0;
   background-color: white;
   position: relative;
   padding: 1rem 2rem;
@@ -34,7 +34,4 @@
 
 .person__full-name {
   margin-bottom: 2rem;
-}
-
-.person__biography {
 }
