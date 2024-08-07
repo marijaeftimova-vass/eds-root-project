@@ -1,4 +1,4 @@
-import {fetchPerson} from '../../api/usePersistedQueries.js';
+import { fetchPerson } from '../../api/usePersistedQueries.js';
 import mapJsonRichText from '../../utils/renderRichText.js';
 
 const BASE_URL = 'https://publish-p11338-e1404827.adobeaemcloud.com';

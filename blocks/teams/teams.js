@@ -1,4 +1,4 @@
-import {fetchTeamsData} from '../../api/usePersistedQueries.js';
+import { fetchTeamsData } from '../../api/usePersistedQueries.js';
 
 const sanitizeName = (name) => name.toLowerCase()
   .replace(/\s+/g, '-')
