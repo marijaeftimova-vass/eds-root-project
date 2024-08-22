@@ -17,7 +17,7 @@
 }
 
 .person-occupation {
-  background-color: #9fdbad;
+  background-color: var(--light-color);
   padding: 1rem 1.5rem;
   display: inline-block;
   margin: 1rem 1rem 0 0;
@@ -30,6 +30,7 @@
   background-color: white;
   position: relative;
   padding: 1rem 2rem;
+  box-shadow: var(--box-shadow);
 }
 
 .person-full-name {

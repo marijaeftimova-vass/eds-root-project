@@ -4,7 +4,7 @@ const sanitizeName = (name) => name.toLowerCase()
   .replace(/\s+/g, '-')
   .replace(/[^\w-]/g, '');
 
-const redirectURL = (name) => `${sanitizeName(name)}?name=${encodeURIComponent(name)}`;
+const redirectURL = (name) => `persons/${sanitizeName(name)}?name=${encodeURIComponent(name)}`;
 
 const createErrorElement = (errorMessage) => {
   const errorDiv = document.createElement('div');
