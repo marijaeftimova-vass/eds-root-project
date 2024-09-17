@@ -90,4 +90,3 @@ export default async function decorate(block) {
 
   removeEmptyDivs(container);
 }
-
