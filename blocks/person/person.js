@@ -67,7 +67,7 @@ function removeEmptyDivs(parentElement) {
 export default async function decorate(block) {
   const personFullName = getQueryParam('name');
   const container = block.querySelector('div > div');
-  container.className = 'person';
+  container.className = "person";
 
   try {
     const { data, error } = await fetchPerson(personFullName);
