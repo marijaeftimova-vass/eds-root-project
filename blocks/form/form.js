@@ -13,8 +13,8 @@ import GoogleReCaptcha from './integrations/recaptcha.js';
 import componentDecorator from './mappings.js';
 import DocBasedFormToAF from './transform.js';
 import transferRepeatableDOM from './components/repeat/repeat.js';
-import {handleSubmit} from './submit.js';
-import {emailPattern, getSubmitBaseUrl} from './constant.js';
+import { handleSubmit } from './submit.js';
+import { emailPattern, getSubmitBaseUrl } from './constant.js';
 
 export const DELAY_MS = 0;
 let captchaField;

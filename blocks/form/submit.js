@@ -1,4 +1,4 @@
-import {DEFAULT_THANK_YOU_MESSAGE} from './constant.js';
+import { DEFAULT_THANK_YOU_MESSAGE } from './constant.js';
 
 export function submitSuccess(e, form) {
   const { payload } = e;

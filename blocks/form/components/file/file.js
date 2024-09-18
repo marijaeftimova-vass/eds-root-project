@@ -1,4 +1,4 @@
-import {stripTags, updateOrCreateInvalidMsg} from '../../util.js';
+import { stripTags, updateOrCreateInvalidMsg } from '../../util.js';
 import {
   defaultErrorMessages,
   dragDropText,
