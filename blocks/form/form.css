@@ -1,8 +1,8 @@
 .button-container {
     padding: 30px;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgb(0 0 0 / 10%);
     max-width: 800px;
     margin: 0 auto;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -61,7 +61,7 @@ input[type="email"]:focus,
 input[type="date"]:focus,
 select:focus {
     border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0 123 255 / 50%);
     background-color: #fff;
     outline: none;
 }
@@ -114,46 +114,10 @@ input[type="radio"] {
 
 .button-container button:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 5px rgb(0 123 255 / 50%);
 }
 
-.file-dragText,
+.file-drag-text,
 input[type="file"] {
     display: none;
-}
-
-@media (max-width: 768px) {
-    .col-6 {
-        min-width: 100%;
-    }
-
-    form {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .button-container {
-        padding: 20px;
-    }
-
-    form {
-        gap: 10px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="date"],
-    select {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    legend {
-        font-size: 1.1em;
-    }
-
-    button {
-        width: 100%;
-    }
 }

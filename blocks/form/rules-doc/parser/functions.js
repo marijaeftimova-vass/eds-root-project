@@ -1,4 +1,4 @@
-import {getToNumber, getValueOf,} from './utils.js';
+import {getToNumber, getValueOf} from './utils.js';
 
 export default function functions(debug) {
   const toNumber = getToNumber(debug);

@@ -1,5 +1,5 @@
 import tokenDefinitions from './Tokens.js';
-import {getToNumber,} from './utils.js';
+import {getToNumber} from './utils.js';
 
 const {
   TOK_EQ,

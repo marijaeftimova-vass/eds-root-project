@@ -2,7 +2,7 @@ import {stripTags, updateOrCreateInvalidMsg} from '../../util.js';
 import {
   defaultErrorMessages,
   dragDropText,
-  fileAttachmentText
+  fileAttachmentText,
 } from '../../constant.js';
 
 const fileSizeRegex = /^(\d*\.?\d+)(\\?(?=[KMGT])([KMGT])(?:i?B)?|B?)$/i;
