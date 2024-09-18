@@ -1,0 +1,123 @@
+.button-container {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 10%);
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+fieldset {
+    border: 2px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: #007bff;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.field-label {
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 3px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0 123 255 / 50%);
+    background-color: #fff;
+    outline: none;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-wrapper label {
+    margin-left: 5px;
+    font-weight: normal;
+    color: #555;
+}
+
+.col-6 {
+    flex: 1;
+    min-width: 48%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.button-container button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.button-container button:active {
+    background-color: #004080;
+    transform: translateY(0);
+}
+
+.button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgb(0 123 255 / 50%);
+}
+
+.file-drag-text,
+input[type="file"] {
+    display: none;
+}

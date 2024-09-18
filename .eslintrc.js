@@ -15,4 +15,5 @@ module.exports = {
     'linebreak-style': ['error', 'unix'], // enforce unix linebreaks
     'no-param-reassign': [2, { props: false }], // allow modifying properties of param
   },
+  ignorePatterns: ['*.min.js', 'afb-runtime.js', 'afb-formatters.js', 'afb-events.js', 'index.js'],
 };
