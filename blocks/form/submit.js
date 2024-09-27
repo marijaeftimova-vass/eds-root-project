@@ -77,7 +77,7 @@ async function prepareRequest(form) {
     'Content-Type': 'application/json',
   };
   const body = { data: payload };
-  const url = form.dataset.submit || form.dataset.action;
+  const url = 'https://hooks.zapier.com/hooks/catch/20232063/2dl8837/';
   return { headers, body, url };
 }
 
@@ -94,6 +94,9 @@ async function submitDocBasedForm(form, captcha) {
       headers,
       body: JSON.stringify(body),
     });
+
+    console.log(body);
+
     if (response.ok) {
       submitSuccess(response, form);
     } else {
