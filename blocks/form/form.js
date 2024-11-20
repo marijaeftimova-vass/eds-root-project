@@ -424,7 +424,10 @@ export async function createForm(formDef, data) {
 
   form.addEventListener('reset', async () => {
     const newForm = await createForm(formDef);
-    document.querySelector(`[data-action="${formDef.action}"]`).replaceWith(newForm);
+    const action = document.querySelector(`[data-action="${formDef.action}"]`);
+    if (action) {
+      action.replaceWith(newForm);
+    }
   });
 
   form.addEventListener('submit', (e) => {
