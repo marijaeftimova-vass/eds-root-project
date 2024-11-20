@@ -1,7 +1,8 @@
 export default class GoogleReCaptcha {
   id;
 
-  siteKey;
+  // Enable recaptcha on every form by default
+  siteKey = '6LfocHsqAAAAAFmf5Hbg923GjyIoi1NaTrTQoXBu';
 
   loadPromise;
 

@@ -76,8 +76,8 @@ async function prepareRequest(form) {
   const headers = {
     'Content-Type': 'application/json',
   };
-  const body = { data: payload };
-  const url = 'https://hooks.zapier.com/hooks/catch/20232063/2dl8837/';
+  const body = payload;
+  const url = 'https://hooks.zapier.com/hooks/catch/20704785/25py2jo/';
   return { headers, body, url };
 }
 
@@ -87,15 +87,13 @@ async function submitDocBasedForm(form, captcha) {
     let token = null;
     if (captcha) {
       token = await captcha.getToken();
-      body.data['g-recaptcha-response'] = token;
+      body['g-recaptcha-response'] = token;
     }
     const response = await fetch(url, {
       method: 'POST',
       headers,
       body: JSON.stringify(body),
     });
-
-    console.log(body);
 
     if (response.ok) {
       submitSuccess(response, form);
