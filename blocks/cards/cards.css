@@ -8,7 +8,7 @@
 }
 
 .cards > ul > li {
-  background-color: var(--background-color);
+  background-color: var(--lightest-color);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }

@@ -15,6 +15,7 @@
   --link-color: #5C5249;
   --link-hover-color: #9D5B44;
   --background-color: #F8F1E7;
+  --lightest-color: #FFFAF2;
   --light-color: #F0E6D8;
   --dark-color: #BFAE95;
   --text-color: black;
@@ -28,6 +29,10 @@
   --body-font-size-m: 16px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
+
+  /* blog sizes */
+  --blog-content-font-size: 20px;
+  --blog-intro-font-size: 24px;
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
@@ -254,4 +259,59 @@ main .section.centered .default-content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* template styles */
+body.blog main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+body.blog main .section {
+  max-width: 800px;
+  font-size: var(--blog-content-font-size);
+}
+
+body.blog strong {
+  display: inline-block;
+  margin: 24px 0;
+}
+
+body.blog h3 {
+  padding: 10px 20px;
+  font-size: var(--blog-intro-font-size);
+}
+
+/* theme styles */
+body.interview h3 {
+  background-color: var(--accent-color);
+}
+
+body.interview strong::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+}
+
+body.article h3 {
+  background-color: var(--dark-color);
+}
+
+body.article strong::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  background-color: var(--dark-color);
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
 }
