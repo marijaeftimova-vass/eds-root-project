@@ -1,0 +1,12 @@
+{
+  "project": "AEM EDS Aniless Doc-based",
+  "plugins": [
+    {
+      "id": "sidekick-library",
+      "title": "Sidekick Library",
+      "environments": ["edit"],
+      "url": "/tools/sidekick/library.html",
+      "includePaths": ["**.docx**"]
+    }
+  ]
+}
