@@ -57,6 +57,34 @@ header nav a:any-link {
   color: currentcolor;
 }
 
+/* language selector styled as button */
+.language-select {
+  font-family: var(--body-font-family);
+  border: none;
+  padding: 8px 32px 8px 16px;
+  font-weight: 600;
+  color: var(--background-color);
+  background-color: var(--link-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  appearance: none; /* Remove native styles */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'><path d='M0 0l5 6 5-6H0z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* move arrow inward */
+  background-size: 0.6em auto;
+}
+
+.language-select:hover,
+.language-select:focus {
+  background-color: var(--link-hover-color);
+}
+
+.language-select:disabled {
+  background-color: var(--light-color);
+  cursor: unset;
+}
+
+
 /* hamburger */
 header nav .nav-hamburger {
   grid-area: hamburger;

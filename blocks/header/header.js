@@ -129,6 +129,36 @@ export default async function decorate(block) {
     });
   }
 
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    const currentLanguage = getMetadata('lang');
+    const url = window.location.href;
+
+    const select = document.createElement('select');
+    select.classList.add('language-select');
+
+    navTools.querySelectorAll('li').forEach((li) => {
+      const langCode = li.textContent.trim();
+      const option = document.createElement('option');
+
+      option.value = url.replace(`/${currentLanguage}/`, `/${langCode}/`);
+      option.textContent = langCode;
+
+      if (langCode === currentLanguage) {
+        option.selected = true;
+      }
+
+      select.appendChild(option);
+    });
+
+    navTools.innerHTML = '';
+    navTools.appendChild(select);
+
+    select.addEventListener('change', (event) => {
+      window.location.href = event.target.value;
+    });
+  }
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');

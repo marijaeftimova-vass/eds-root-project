@@ -1,4 +1,7 @@
-import { createOptimizedPicture, fetchPlaceholders } from '../../scripts/aem.js';
+import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
+import ffetch from '../../scripts/ffetch.js';
+
+const language = getMetadata('lang');
 
 function getRatingValue(regex, content) {
   const matchForFirstNumber = content.match(regex);
@@ -46,8 +49,8 @@ function decorateImage(ratingImageContainer) {
 }
 
 async function setupRatingText(element) {
-  const placeholders = await fetchPlaceholders();
-  const { rating } = placeholders;
+  const placeholders = await ffetch('placeholders.json').all();
+  const rating = placeholders.find((item) => item.Key === 'Rating')[language];
 
   const infoText = document.createElement('span');
   infoText.textContent = rating;
