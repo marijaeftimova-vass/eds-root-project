@@ -45,6 +45,7 @@
   --body-font-family: 'Inter', sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --ff-pricefx-icons: 'pricefx-icons', sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -63,9 +64,19 @@
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 16px;
 
+  /* Base Spacing */
+  --spacing-micro: 4px;
+  --spacing-xxsmall: 8px;
+  --spacing-xsmall: 16px;
+  --spacing-small: 24px;
+  --spacing-medium: 32px;
+  --spacing-large: 48px;
+  --spacing-xlarge: 64px;
+  --spacing-xxlarge: 96px;
+  --spacing-jumbo: 128px;
+
   /* nav height */
   --nav-height: 64px;
-
 
   /* custom colors */
   --accent-color: #F49372;
@@ -77,6 +88,10 @@
 
   /* custom common border-radius */
   --border-radius: 8px;
+
+  /* Font Icons */
+  --icon-plus: "\e917";
+  --icon-minus: "\e915";
 }
 
 @media (width >= 900px) {

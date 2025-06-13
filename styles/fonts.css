@@ -6,3 +6,14 @@
   font-display: swap;
   src: url('../fonts/InterVariable.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: pricefx-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src:
+  url('../fonts/pricefx-icons.ttf') format('truetype'),
+  url('../fonts/pricefx-icons.woff') format('woff'),
+  url('../fonts/pricefx-icons.svg') format('svg');
+}
