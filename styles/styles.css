@@ -13,16 +13,16 @@
 :root {
   /* colors */
 
- 
-  /* 🟦 Primary Colors */
+
+  /* Primary Colors */
   --alpine-blue: #0076A8; /* Primary CTAs, links, buttons */
   --sky-blue: #E0F4FF; /* Background highlights, hovers */
 
-  /* 🔴 Accent Colors */
+  /* Accent Colors */
   --swiss-red: #D52B1E; /* Alerts, highlights, secondary CTA */
   --coral-tint: #FFE5E0; /* Soft backgrounds, error light */
 
-  /* ⚪ Neutral Colors */
+  /* Neutral Colors */
 
   --pure-white: #FFF; /* Backgrounds */
   --light-gray: #F4F4F4; /* Panels, cards */
@@ -30,7 +30,7 @@
   --charcoal-gray: #333; /* Headlines, strong body text */
   --slate-gray: #666; /* Secondary text, icons */
 
-  /* 🟢 Success/Info Colors */
+  /* Success/Info Colors */
   --forest-green: #2D7A4C; /* Confirmation, success messaging */
   --mint-green: #E5F7EC; /* Background for success */
   --link-color: var(--alpine-blue);
@@ -66,7 +66,7 @@
   /* nav height */
   --nav-height: 64px;
 
- 
+
   /* custom colors */
   --accent-color: #F49372;
   --text-light-color: var(--light-gray);
@@ -159,6 +159,14 @@ main pre {
   border-radius: 0.25em;
   overflow-x: auto;
   white-space: pre;
+}
+
+main {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 /* links */
