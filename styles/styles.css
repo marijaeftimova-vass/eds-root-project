@@ -12,16 +12,37 @@
 
 :root {
   /* colors */
-  --link-color: #5C5249;
-  --link-hover-color: #9D5B44;
-  --background-color: #F8F1E7;
-  --lightest-color: #FFFAF2;
-  --light-color: #F0E6D8;
-  --dark-color: #BFAE95;
-  --text-color: black;
+
+ 
+  /* 🟦 Primary Colors */
+  --alpine-blue: #0076A8; /* Primary CTAs, links, buttons */
+  --sky-blue: #E0F4FF; /* Background highlights, hovers */
+
+  /* 🔴 Accent Colors */
+  --swiss-red: #D52B1E; /* Alerts, highlights, secondary CTA */
+  --coral-tint: #FFE5E0; /* Soft backgrounds, error light */
+
+  /* ⚪ Neutral Colors */
+
+  --pure-white: #FFF; /* Backgrounds */
+  --light-gray: #F4F4F4; /* Panels, cards */
+  --mid-gray: #CCC; /* Borders, dividers */
+  --charcoal-gray: #333; /* Headlines, strong body text */
+  --slate-gray: #666; /* Secondary text, icons */
+
+  /* 🟢 Success/Info Colors */
+  --forest-green: #2D7A4C; /* Confirmation, success messaging */
+  --mint-green: #E5F7EC; /* Background for success */
+  --link-color: var(--alpine-blue);
+  --link-hover-color: color-mix(in srgb, var(--alpine-blue) 70%, transparent);
+  --background-color: var(--pure-white);
+  --lightest-color: var(--sky-blue);
+  --light-color: var(--light-gray);
+  --dark-color: var(--mid-gray);
+  --text-color: var(--charcoal-gray);
 
   /* fonts */
-  --body-font-family: 'Nunito-VariableFont_wght';
+  --body-font-family: 'Inter', sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
@@ -45,9 +66,10 @@
   /* nav height */
   --nav-height: 64px;
 
+ 
   /* custom colors */
   --accent-color: #F49372;
-  --text-light-color: #F8F1E7;
+  --text-light-color: var(--light-gray);
   --darkest-color: #5C5249;
 
   /* custom shadow */
@@ -55,13 +77,6 @@
 
   /* custom common border-radius */
   --border-radius: 8px;
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 100.06%;
-  ascent-override: 95%;
-  src: local('Arial');
 }
 
 @media (width >= 900px) {
@@ -154,7 +169,7 @@ a:any-link {
 
 a:hover {
   text-decoration: underline;
-  color: var(--link-hover-color);
+  color: var(--sky-blue);
 }
 
 /* buttons */
@@ -170,7 +185,7 @@ button {
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
-  color: var(--background-color);
+  color: var(--pure-white);
   background-color: var(--link-color);
   margin: 16px 0;
   white-space: nowrap;
@@ -196,7 +211,7 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: unset;
-  border: 2px solid currentcolor;
+  border: 2px solid var(--mid-gray);
   color: var(--text-color);
 }
 
@@ -242,8 +257,8 @@ main .section.highlight {
 }
 
 main .section.dark {
-  color: var(--text-light-color);
-  background-color: var(--darkest-color);
+  color: var(--pure-white);
+  background-color: var(--dark-color);
 
   a.button:any-link,
   button {
