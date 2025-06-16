@@ -60,7 +60,7 @@
 }
 
 .icon-card > .icon-header > picture {
-  max-width: 75px;
+  max-width: 125px;
   flex-shrink: 0;
   margin-right: 16px;
 }
