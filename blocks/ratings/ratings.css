@@ -3,7 +3,7 @@
   gap: 32px;
   padding: 16px;
   overflow-x: scroll;
-  background-color: var(--light-color);
+  background-color: var(--pure-white);
 
   > .rating {
     flex: 1 0 auto;

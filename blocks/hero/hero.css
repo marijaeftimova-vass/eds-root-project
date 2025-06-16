@@ -4,8 +4,8 @@ main .hero-container > div {
 
 main .hero {
   position: relative;
-  padding: 0 60px;
-  min-height: 600px;
+  padding: 0 30px;
+  min-height: 300px;
   display: flex;
   align-items: center;
 }
@@ -45,4 +45,18 @@ main .hero-container {
   height: 100%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+@media (width >= 600px) {
+  main .hero {
+    padding: 0 30px;
+    min-height: 500px;
+  }
+}
+
+@media (width >= 900px) {
+  main .hero {
+    padding: 0 60px;
+    min-height: 600px;
+  }
 }
