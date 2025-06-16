@@ -6,9 +6,11 @@ export default async function decorate(block) {
   const placeholders = await ffetch('/placeholders.json').all();
 
   if (!articles || articles.length === 0) {
-    console.warn('No articles found for article-list block');
     return;
   }
+
+  // delete first element of articles array
+  articles.shift();
 
   block.textContent = '';
 
