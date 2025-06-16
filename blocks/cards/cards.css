@@ -66,7 +66,7 @@
 }
 
 .icon-card > .icon-header > h3 {
-  font-size: 1.5rem;
+  font-size: var(--heading-font-size-s);
   color: var(--alpine-blue);
 }
 
