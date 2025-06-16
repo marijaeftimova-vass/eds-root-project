@@ -45,13 +45,8 @@ div.article-list > article picture img:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-body.article-list > main .hero.block img {
-    filter: brightness(65%);
-}
-
-body.article-list > main .hero.block h1 {
-    color: var(--pure-white);
-    font-size: var(--heading-font-size-xl);
+body.article-list > main .hero.block .button-container a {
+    background-color: var(--swiss-red);
 }
 
 @media (width >= 600px) {
