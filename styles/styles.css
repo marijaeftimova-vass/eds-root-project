@@ -113,7 +113,14 @@
 
 .space-y-3 > :not(:last-child) {
   --space-y-reverse: 0;
-  --use-number: 2;
+  --use-number: 3;
+
+  margin-block: calc(calc(var(--spacing-xxsmall) * var(--use-number)) * var(--space-y-reverse)) calc(calc(var(--spacing-xxsmall) * var(--use-number)) * calc(1 - var(--space-y-reverse)));
+}
+
+.space-y-4 > :not(:last-child) {
+  --space-y-reverse: 0;
+  --use-number: 4;
 
   margin-block: calc(calc(var(--spacing-xxsmall) * var(--use-number)) * var(--space-y-reverse)) calc(calc(var(--spacing-xxsmall) * var(--use-number)) * calc(1 - var(--space-y-reverse)));
 }
