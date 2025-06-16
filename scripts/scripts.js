@@ -42,13 +42,38 @@ async function loadFonts() {
   }
 }
 
+function buildArticleList(mainEl) {
+  const div = document.createElement('div');
+  mainEl.querySelectorAll('main > div').forEach((section) => {
+    const hasH2 = section.querySelector('h2');
+    if (hasH2) {
+      const [headline, picture, teaser] = section.children;
+      if (headline && picture && teaser) {
+        const article = buildBlock('article-teaser', {
+          elems: [picture, headline, teaser],
+        });
+        div.append(article);
+        section.remove();
+      }
+    }
+  });
+
+  mainEl.append(div);
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
 function buildAutoBlocks(main) {
   try {
-    buildHeroBlock(main);
+    if (window.location.pathname.includes('/blog')) {
+      if (document.body.classList.contains('articlelist')) {
+        buildArticleList(main);
+      }
+    } else {
+      buildHeroBlock(main);
+    }
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);

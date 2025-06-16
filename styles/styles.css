@@ -10,6 +10,9 @@
  * governing permissions and limitations under the License.
  */
 
+/**
+ * mobile-first CSS variables for the VASSurance theme
+ */
 :root {
   /* colors */
 
@@ -92,17 +95,30 @@
   /* Font Icons */
   --icon-plus: "\e917";
   --icon-minus: "\e915";
+
+
 }
 
-@media (width >= 900px) {
-  :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
-    --heading-font-size-s: 24px;
-    --heading-font-size-xs: 18px;
-  }
+/** Utility classes **/
+.space-y-1 > :not(:last-child) {
+  --space-y-reverse: 0;
+  --use-number: 1;
+
+  margin-block: calc(calc(var(--spacing-xxsmall) * var(--use-number)) * var(--space-y-reverse)) calc(calc(var(--spacing-xxsmall) * var(--use-number)) * calc(1 - var(--space-y-reverse)));
+}
+
+.space-y-2 > :not(:last-child) {
+  --space-y-reverse: 0;
+  --use-number: 2;
+
+  margin-block: calc(calc(var(--spacing-xxsmall) * var(--use-number)) * var(--space-y-reverse)) calc(calc(var(--spacing-xxsmall) * var(--use-number)) * calc(1 - var(--space-y-reverse)));
+}
+
+.space-y-3 > :not(:last-child) {
+  --space-y-reverse: 0;
+  --use-number: 2;
+
+  margin-block: calc(calc(var(--spacing-xxsmall) * var(--use-number)) * var(--space-y-reverse)) calc(calc(var(--spacing-xxsmall) * var(--use-number)) * calc(1 - var(--space-y-reverse)));
 }
 
 body {
@@ -267,11 +283,26 @@ main .section {
 }
 
 @media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 60px;
+    --heading-font-size-xl: 48px;
+    --heading-font-size-l: 36px;
+    --heading-font-size-m: 30px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 18px;
+  }
+
   .section > div {
     max-width: 1200px;
     margin: auto;
   }
 }
+
+
+
+
+
+
 
 /* section metadata */
 main .section.light,
@@ -304,21 +335,6 @@ body.blog main {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-body.blog main .section {
-  max-width: 800px;
-  font-size: var(--blog-content-font-size);
-}
-
-body.blog strong {
-  display: inline-block;
-  margin: 24px 0;
-}
-
-body.blog h3 {
-  padding: 10px 20px;
-  font-size: var(--blog-intro-font-size);
 }
 
 /* theme styles */
