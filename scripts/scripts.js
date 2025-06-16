@@ -61,15 +61,32 @@ function buildArticleList(mainEl) {
   mainEl.append(div);
 }
 
+function buildArticleDetailPage(mainEl) {
+  mainEl.querySelectorAll('main > div').forEach((section) => {
+    const hasH1 = section.querySelector('h1');
+    if (hasH1) {
+      const [headline, picture, teaser, ...rest] = section.children;
+      if (headline && picture && teaser) {
+        const article = buildBlock('article-detail', {
+          elems: [headline, picture, teaser, ...rest],
+        });
+        section.append(article);
+      }
+    }
+  });
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
 function buildAutoBlocks(main) {
   try {
-    if (window.location.pathname.includes('/blog')) {
-      if (document.body.classList.contains('articlelist')) {
+    if (document.body.classList.contains('blog')) {
+      if (document.body.classList.contains('article-list')) {
         buildArticleList(main);
+      } else if (document.body.classList.contains('article-detail')) {
+        buildArticleDetailPage(main);
       }
     } else {
       buildHeroBlock(main);
