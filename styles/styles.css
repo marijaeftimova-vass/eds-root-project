@@ -205,7 +205,6 @@ a:any-link {
 
 a:hover {
   text-decoration: underline;
-  color: var(--sky-blue);
 }
 
 /* buttons */

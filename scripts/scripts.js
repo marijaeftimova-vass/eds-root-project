@@ -42,25 +42,6 @@ async function loadFonts() {
   }
 }
 
-function buildArticleList(mainEl) {
-  const div = document.createElement('div');
-  mainEl.querySelectorAll('main > div').forEach((section) => {
-    const hasH2 = section.querySelector('h2');
-    if (hasH2) {
-      const [headline, picture, teaser] = section.children;
-      if (headline && picture && teaser) {
-        const article = buildBlock('article-teaser', {
-          elems: [picture, headline, teaser],
-        });
-        div.append(article);
-        section.remove();
-      }
-    }
-  });
-
-  mainEl.append(div);
-}
-
 function buildArticleDetailPage(mainEl) {
   mainEl.querySelectorAll('main > div').forEach((section) => {
     const hasH1 = section.querySelector('h1');
@@ -83,9 +64,7 @@ function buildArticleDetailPage(mainEl) {
 function buildAutoBlocks(main) {
   try {
     if (document.body.classList.contains('blog')) {
-      if (document.body.classList.contains('article-list')) {
-        buildArticleList(main);
-      } else if (document.body.classList.contains('article-detail')) {
+      if (document.body.classList.contains('article-detail')) {
         buildArticleDetailPage(main);
       }
     } else {
