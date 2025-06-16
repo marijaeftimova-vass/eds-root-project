@@ -24,10 +24,19 @@ main .hero-container {
   padding: 0;
 }
 
+.hero > div > div > p {
+  margin:0;
+}
+
 .hero h1 {
   margin-left: auto;
   margin-right: auto;
-  color: var(--pure-white);
+  color: var(--alpine-blue);
+  background: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(5px);
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius);
+  display: table;
 }
 
 .hero picture {
@@ -36,7 +45,7 @@ main .hero-container {
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;
-  filter: brightness(80%);
+  filter: brightness(100%);
 }
 
 .hero img {
