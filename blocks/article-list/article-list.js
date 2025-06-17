@@ -1,8 +1,9 @@
 import ffetch from '../../scripts/ffetch.js';
-import { createOptimizedPicture } from '../../scripts/aem.js';
+import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
-  const articles = await ffetch('/en/query-index.json').all();
+  const lang = getMetadata('lang');
+  const articles = await ffetch(`/${lang}/query-index.json`).all();
   const placeholders = await ffetch('/placeholders.json').all();
 
   if (!articles || articles.length === 0) {
