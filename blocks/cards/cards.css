@@ -43,3 +43,33 @@
 .cards .card-tag-wrapper {
   display: inline;
 }
+
+.icon-cards > ul {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.icon-cards > ul > li {
+  background-color: var(--pure-white);
+  box-shadow: none;
+  border-radius: var(--border-radius);
+}
+
+.icon-card > .icon-header {
+  display: flex;
+  align-items: center;
+}
+
+.icon-card > .icon-header > picture {
+  max-width: 125px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.icon-card > .icon-header > h3 {
+  font-size: var(--heading-font-size-s);
+  color: var(--alpine-blue);
+}
+
+.icon-card > .icon-header > *:last-child {
+  flex-grow: 1;
+}

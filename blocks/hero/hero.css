@@ -2,21 +2,41 @@ main .hero-container > div {
   max-width: unset;
 }
 
+main .hero {
+  position: relative;
+  padding: 0 30px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+main .hero > div {
+  width: 100%;
+}
+
+main .hero > div > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 50%));
+  grid-gap: 16px;
+}
+
 main .hero-container {
   padding: 0;
 }
 
-.hero {
-  position: relative;
-  padding: 32px;
-  min-height: 300px;
+.hero > div > div > p {
+  margin:0;
 }
 
 .hero h1 {
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: white;
+  color: var(--alpine-blue);
+  background: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(5px);
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius);
+  display: table;
 }
 
 .hero picture {
@@ -25,10 +45,27 @@ main .hero-container {
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;
+  filter: brightness(100%);
 }
 
 .hero img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+@media (width >= 600px) {
+  main .hero {
+    padding: 0 30px;
+    min-height: 500px;
+  }
+}
+
+@media (width >= 900px) {
+  main .hero {
+    padding: 0 60px;
+    min-height: 600px;
+  }
 }

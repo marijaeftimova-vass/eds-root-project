@@ -1,0 +1,85 @@
+.accordion details {
+    border-top: 2px solid var(--light-gray);
+}
+
+.accordion details summary {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    overflow: hidden;
+    min-height: 52px;
+    text-align: left;
+}
+
+.accordion details summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion details summary::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s;
+}
+
+.accordion details .accordion-item-body {
+    padding: 0 4px 30px;
+    font-style: normal;
+    font-size: var(--body-font-size-m);
+    line-height: 28px;
+    text-align: left;
+}
+
+.accordion .accordion-button {
+    background: transparent;
+    border:none;
+}
+
+.accordion .accordion-button:focus{
+    outline: none;
+    border:none;
+}
+
+.accordion .plus-icon{
+    color: var(--swiss-red);
+    cursor:pointer;
+    line-height: 0;
+    font-family: var(--ff-pricefx-icons);
+    font-size: calc((30 / 16) * 1rem);
+    position: absolute;
+    right: 0;
+    height: 52px;
+}
+
+.accordion .accordion-item-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-top: 17px;
+    margin: 0;
+}
+
+.accordion .accordion-item-label p {
+    margin-bottom: 0;
+}
+
+.accordion .accordion-item-label h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.accordion .accordion-item[open] .plus-icon::after {
+    content: var(--icon-minus);
+    display: inline-block;
+    width: 31px;
+    height: 52px;
+}
+
+.accordion .accordion-item:not([open]) .plus-icon::after {
+    content: var(--icon-plus);
+    display: inline-block;
+    width: 31px;
+    height: 52px;
+}

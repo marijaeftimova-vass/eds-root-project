@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--light-color);
+  background-color: var(--pure-white);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -176,13 +176,15 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  display: none;
+  height: 40px;
+  width: auto;
+  align-self: center;
 
   @media (width >= 900px) {
     display: block;
-    width: 64px;
-    margin-top: 24px;
+    width: 200px;
     height: auto;
+    margin-top: 5px;
   }
 }
 
@@ -192,7 +194,7 @@ header nav .nav-sections {
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
-  background-color: var(--overlay-color);
+  background-color: var(--pure-white);
 }
 
 header nav[aria-expanded='true'] .nav-sections {

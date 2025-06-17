@@ -1,0 +1,65 @@
+/**
+* mobile-first styles for article teaser block
+*/
+div.article-list > article {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+div.article-list > article > .article-teaser-picture  {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+div.article-list > article > .article-teaser-content > h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--alpine-blue);
+}
+
+div.article-list > article picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+div.article-list > article picture img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    scale: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+div.article-list > article picture img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+body.article-list > main .hero.block .button-container a {
+    background-color: var(--swiss-red);
+}
+
+@media (width >= 600px) {
+    div.article-list > article {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (width >= 900px) {
+    div.article-list > article {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 40px;
+        gap: 40px;
+    }
+}
