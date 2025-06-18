@@ -56,6 +56,10 @@ main .hero-container {
   border-bottom-right-radius: 15px;
 }
 
+.hero.dark h1 {
+    color: var(--pure-white);
+}
+
 @media (width >= 600px) {
   main .hero {
     padding: 0 30px;
