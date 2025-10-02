@@ -3,7 +3,7 @@ main .hero-container > div {
 }
 
 main .hero {
-  position: absolute;
+  position: relative;
   padding: 0 30px;
   min-height: 300px;
   display: flex;
