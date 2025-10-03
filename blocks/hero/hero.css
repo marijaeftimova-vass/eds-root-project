@@ -31,8 +31,8 @@ main .hero-container {
 .hero h1 {
   margin-left: auto;
   margin-right: auto;
-  color: var(--alpine-blue);
-  background: rgb(255 255 255 / 50%);
+    color: var(--pure-white);
+    background: rgb(213 43 30 / 30%);
   backdrop-filter: blur(5px);
   padding: var(--spacing-small);
   border-radius: var(--border-radius);
@@ -56,7 +56,7 @@ main .hero-container {
 
 .hero.dark h1 {
   color: var(--pure-white);
-  background: rgb(0 118 168 / 50%);
+  background: rgb(213 43 30 / 30%);
 }
 
 .hero.rounded img {

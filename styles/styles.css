@@ -18,11 +18,10 @@
 
 
   /* Primary Colors */
-  --alpine-blue: #0076A8; /* Primary CTAs, links, buttons */
+  --swiss-red: #D52B1E; /* Primary CTAs, links, buttons */
   --sky-blue: #E0F4FF; /* Background highlights, hovers */
 
   /* Accent Colors */
-  --swiss-red: #D52B1E; /* Alerts, highlights, secondary CTA */
   --coral-tint: #FFE5E0; /* Soft backgrounds, error light */
 
   /* Neutral Colors */
@@ -36,13 +35,13 @@
   /* Success/Info Colors */
   --forest-green: #2D7A4C; /* Confirmation, success messaging */
   --mint-green: #E5F7EC; /* Background for success */
-  --link-color: var(--alpine-blue);
-  --link-hover-color: color-mix(in srgb, var(--alpine-blue) 70%, transparent);
+  --link-color: var(--swiss-red);
+  --link-hover-color: color-mix(in srgb, var(--swiss-red) 70%, transparent);
   --background-color: var(--pure-white);
   --lightest-color: var(--sky-blue);
   --light-color: var(--light-gray);
   --dark-color: var(--mid-gray);
-  --text-color: var(--charcoal-gray);
+  --text-color: var(--pure-white);
 
   /* fonts */
   --body-font-family: 'Inter', sans-serif;
@@ -87,7 +86,7 @@
   --box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
 
   /* custom common border-radius */
-  --border-radius: 8px;
+  --border-radius: 20px;
 
   /* Font Icons */
   --icon-plus: "\e917";
@@ -131,7 +130,7 @@ body {
   font-family: var(--body-font-family);
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: black;
   display: none;
 }
 

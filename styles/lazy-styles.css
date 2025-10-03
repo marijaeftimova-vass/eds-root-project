@@ -1,6 +1,6 @@
 /* add global styles that can be loaded post LCP here */
 .bg-skyblue {
-    background-color: var(--sky-blue)
+    background-color: black;
 }
 
 .bg-skyblue h1,
@@ -9,7 +9,7 @@
 .bg-skyblue h4,
 .bg-skyblue h5,
 .bg-skyblue h6 {
-    color: var(--alpine-blue)
+    color: var(--swiss-red)
 }
 
 .border-radius {

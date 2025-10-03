@@ -1,5 +1,6 @@
 body.article-detail h1 {
-    color: var(--alpine-blue);
+    margin-top: -1rem;
+    color: var(--swiss-red);
 }
 
 body.article-detail picture {

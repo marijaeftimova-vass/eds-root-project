@@ -19,7 +19,7 @@ div.article-list > article > .article-teaser-picture  {
 div.article-list > article > .article-teaser-content > h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: var(--alpine-blue);
+    color: var(--swiss-red);
 }
 
 div.article-list > article picture {
