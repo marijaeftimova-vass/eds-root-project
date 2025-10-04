@@ -38,7 +38,7 @@
 
     .ratings-rating-image {
         img {
-            border-radius: 50%;
+            border-radius: 5%;
         }
 
         @media (width >= 900px) {
