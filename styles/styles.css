@@ -75,7 +75,8 @@
   --spacing-jumbo: 128px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 80px;
+  --nav-width:1000px;
 
   /* custom colors */
   --accent-color: #F49372;
