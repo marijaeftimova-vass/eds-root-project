@@ -65,10 +65,27 @@
     margin-bottom: 0;
 }
 
-.accordion .accordion-item-label h3 {
+.accordion .accordion-item-label > *:first-child {
     margin: 0;
     font-size: 1.5rem;
+    transform: translateX(2rem);
+    opacity: 0;
+    transition: transform 600ms ease, opacity 600ms ease;
 }
+
+.accordion .accordion-item-label > *:first-child.in-view {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion .accordion-item-label > *:first-child {
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+}
+
 
 .accordion .accordion-item[open] .plus-icon::after {
     content: var(--icon-minus);
