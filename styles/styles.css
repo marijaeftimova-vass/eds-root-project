@@ -19,18 +19,16 @@
 
   /* Primary Colors */
   --swiss-red: #D52B1E; /* Primary CTAs, links, buttons */
-  --sky-blue: #E0F4FF; /* Background highlights, hovers */
 
   /* Accent Colors */
-  --coral-tint: #FFE5E0; /* Soft backgrounds, error light */
+  --coral-tint: #FFE5E0; /* Error light, hover */
 
   /* Neutral Colors */
 
-  --pure-white: #FFF; /* Backgrounds */
-  --light-gray: #F4F4F4; /* Panels, cards */
-  --mid-gray: #CCC; /* Borders, dividers */
-  --charcoal-gray: #333; /* Headlines, strong body text */
-  --slate-gray: #666; /* Secondary text, icons */
+  --pure-white: #FFF; /* Text color */
+  --light-gray: #F4F4F4; /* Light backgrounds */
+  --mid-gray: #CCC; /* Borders, dividers, shadows */
+  --charcoal-gray: #333; /* Headlines, strong body text on light backgrounds */
 
   /* Success/Info Colors */
   --forest-green: #2D7A4C; /* Confirmation, success messaging */
@@ -38,7 +36,6 @@
   --link-color: var(--swiss-red);
   --link-hover-color: color-mix(in srgb, var(--swiss-red) 70%, transparent);
   --background-color: var(--pure-white);
-  --lightest-color: var(--sky-blue);
   --light-color: var(--light-gray);
   --dark-color: var(--mid-gray);
   --text-color: var(--pure-white);
