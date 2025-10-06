@@ -1,5 +1,5 @@
 header .nav-wrapper {
-    background-color: black;
+    background-color: var(--charcoal-gray);
     width: 100%;
     display: flex;
     padding-top: 10px;

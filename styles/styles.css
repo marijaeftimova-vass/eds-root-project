@@ -28,7 +28,7 @@
   --pure-white: #FFF; /* Text color */
   --light-gray: #F4F4F4; /* Light backgrounds */
   --mid-gray: #CCC; /* Borders, dividers, shadows */
-  --charcoal-gray: #333; /* Headlines, strong body text on light backgrounds */
+  --charcoal-gray: #121212; /* Headlines, strong body text on light backgrounds */
 
   /* Success/Info Colors */
   --forest-green: #2D7A4C; /* Confirmation, success messaging */
@@ -128,7 +128,7 @@ body {
   font-family: var(--body-font-family);
   line-height: 1.6;
   color: var(--text-color);
-  background-color: black;
+  background-color: var(--charcoal-gray);
   display: none;
 }
 

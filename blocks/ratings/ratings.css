@@ -3,7 +3,7 @@
     gap: 32px;
     padding: 16px;
     overflow-x: scroll;
-    background-color: black;
+    background-color: var(--charcoal-gray);
     color: black;
 
     > .rating {
