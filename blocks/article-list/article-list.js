@@ -2,8 +2,15 @@ import ffetch from '../../scripts/ffetch.js';
 import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
-  const lang = getMetadata('lang');
-  const articles = await ffetch(`/${lang}/query-index.json`).all();
+  const lang = getMetadata('lang') || 'en';
+
+  //  Preview-only cache buster to avoid stale /query-index.json on .aem.page
+  const baseIndex = `/${lang}/query-index.json`;
+  // eslint-disable-next-line no-restricted-globals
+  const isPreview = location.hostname.endsWith('.aem.page');
+  const buster = isPreview ? `${baseIndex.includes('?') ? '&' : '?'}_=${Date.now()}` : '';
+
+  const articles = await ffetch(`${baseIndex}${buster}`).all();
   const placeholders = await ffetch('/placeholders.json').all();
 
   if (!articles || articles.length === 0) {
