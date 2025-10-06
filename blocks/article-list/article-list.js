@@ -4,18 +4,19 @@ import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
 export default async function decorate(block) {
   const lang = getMetadata('lang') || 'en';
 
-  //  Preview-only cache buster to avoid stale /query-index.json on .aem.page
+  // Preview/local dev cache-buster to avoid stale /query-index.json
   const baseIndex = `/${lang}/query-index.json`;
   // eslint-disable-next-line no-restricted-globals
-  const isPreview = location.hostname.endsWith('.aem.page');
-  const buster = isPreview ? `${baseIndex.includes('?') ? '&' : '?'}_=${Date.now()}` : '';
+  const isPreviewHost = location.hostname.endsWith('.aem.page');
+  // eslint-disable-next-line no-restricted-globals
+  const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  const needsBuster = isPreviewHost || isLocal;
+  const buster = needsBuster ? `${baseIndex.includes('?') ? '&' : '?'}_=${Date.now()}` : '';
 
   const articles = await ffetch(`${baseIndex}${buster}`).all();
   const placeholders = await ffetch('/placeholders.json').all();
 
-  if (!articles || articles.length === 0) {
-    return;
-  }
+  if (!articles || articles.length === 0) return;
 
   // delete first element of articles array
   articles.shift();
@@ -39,7 +40,6 @@ export default async function decorate(block) {
     const link = document.createElement('a');
     link.href = article.path;
     link.textContent = article.title;
-
     headline.append(link);
 
     const description = document.createElement('p');
