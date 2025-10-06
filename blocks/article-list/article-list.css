@@ -6,6 +6,9 @@ div.article-list > article {
     grid-template-columns: 1fr;
     margin-bottom: 40px;
     gap: 20px;
+    padding-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 5px -5px var(--mid-gray);
 }
 
 div.article-list > article > .article-teaser-picture  {
