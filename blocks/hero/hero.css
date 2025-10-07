@@ -8,6 +8,7 @@ main .hero {
   min-height: 300px;
   display: flex;
   align-items: center;
+  color: var(--pure-white);
 }
 
 main .hero > div {
@@ -26,6 +27,10 @@ main .hero-container {
 
 .hero > div > div > p {
   margin:0;
+}
+
+body > main > div.section.border-radius.cards-container > div.default-content-wrapper{
+    margin-top: 4rem;
 }
 
 .hero h1 {

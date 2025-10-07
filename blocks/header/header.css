@@ -1,5 +1,5 @@
 header .nav-wrapper {
-    background-color: var(--charcoal-gray);
+    background-color: var(--background-color);
     width: 100%;
     display: flex;
     padding-top: 10px;
@@ -19,7 +19,7 @@ header nav {
     height: var(--nav-height);
     padding: 0 1rem;
     font-family: var(--body-font-family);
-    background: rgb(255 255 255 / 90%);
+    background: var(--nav-bg-color);
     backdrop-filter: blur(5px);
     border-radius: 1rem;
     z-index: 1000;
@@ -53,7 +53,7 @@ header nav[aria-expanded='true'] {
     }
 }
 
-@media (980px <= width <= 1040px) {
+@media (980px <= width <= 1080px) {
     header nav {
         gap: 0 2rem;
     }
@@ -75,7 +75,7 @@ header nav[aria-expanded='true'] {
     }
 }
 
-@media (width < 980px) {
+@media (width < 1010px) {
     header nav {
         display: flex;
         align-items: center;
@@ -137,7 +137,7 @@ header nav[aria-expanded='true'] {
     }
 }
 
-@media (width >= 980px) {
+@media (width >= 1010px) {
     header nav {
         display: flex;
         justify-content: space-between;
@@ -165,7 +165,7 @@ header nav a:any-link {
     border: none;
     padding: 8px 32px 8px 16px;
     font-weight: 600;
-    color: var(--background-color);
+    color: var(--pure-white);
     background-color: var(--link-color);
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -259,7 +259,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
     transform: rotate(-45deg);
 }
 
-@media (width >= 980px) {
+@media (width >= 1010px) {
     header nav .nav-hamburger {
         display: none;
         visibility: hidden;
@@ -280,7 +280,7 @@ header nav .nav-brand img {
     align-self: center;
 }
 
-@media (width >= 980px) {
+@media (width >= 1010px) {
     header nav .nav-brand img {
         display: block;
         width: 200px;
@@ -416,3 +416,32 @@ header nav .nav-tools {
     flex: 0 0 auto;
     min-width: 0;
 }
+
+.theme-select {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid var(--mid-gray);
+    background: transparent;
+    cursor: pointer;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: radial-gradient(circle at 50% 50%, var(--theme-dot-color, #000) 60%, transparent 61%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70% 70%;
+}
+
+:root[data-theme="dark"] .theme-select { --theme-dot-color: #000; }
+
+:root[data-theme="light"] .theme-select {
+    --theme-dot-color: #fff;
+
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 25%);
+}
+
+.theme-select::-ms-expand { display: none; }
