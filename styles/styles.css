@@ -15,7 +15,7 @@
  */
 :root {
   /* colors */
-
+    color-scheme: dark;
 
   /* Primary Colors */
   --swiss-red: #D52B1E; /* Primary CTAs, links, buttons */
@@ -35,7 +35,7 @@
   --mint-green: #E5F7EC; /* Background for success */
   --link-color: var(--swiss-red);
   --link-hover-color: color-mix(in srgb, var(--swiss-red) 70%, transparent);
-  --background-color: var(--pure-white);
+  --background-color: #0b0b0b;
   --light-color: var(--light-gray);
   --dark-color: var(--mid-gray);
   --text-color: var(--pure-white);
@@ -75,6 +75,9 @@
   --nav-height: 80px;
   --nav-width:1000px;
 
+  /* nav background color */
+  --nav-bg-color: rgb(255 255 255 / 90%);
+
   /* custom colors */
   --accent-color: #F49372;
   --text-light-color: var(--light-gray);
@@ -89,8 +92,18 @@
   /* Font Icons */
   --icon-plus: "\e917";
   --icon-minus: "\e915";
+}
 
+:root[data-theme="light"] {
+    color-scheme: light;
 
+    --background-color: #fff;
+    --text-color: #0b0b0b;
+    --link-color: var(--swiss-red);
+    --link-hover-color: color-mix(in srgb, var(--swiss-red) 70%, transparent);
+    --light-color: #f4f4f4;
+    --dark-color: #e6e6e6;
+    --nav-bg-color: rgba(237 237 237 / 90%);
 }
 
 /** Utility classes **/
@@ -128,7 +141,7 @@ body {
   font-family: var(--body-font-family);
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--charcoal-gray);
+  background-color: var(--background-color);
   display: none;
 }
 

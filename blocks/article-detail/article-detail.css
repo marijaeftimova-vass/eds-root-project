@@ -1,6 +1,6 @@
 body.article-detail h1 {
     margin-top: -1rem;
-    color: var(--pure-white);
+    color: var(--text-color);
 }
 
 body.article-detail picture {
