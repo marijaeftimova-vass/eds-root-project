@@ -15,6 +15,29 @@ import {
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
+export function createTag(tag, attributes, html) {
+  const el = document.createElement(tag);
+  if (html) {
+    if (
+      html instanceof HTMLElement
+      || html instanceof SVGElement
+      || html instanceof DocumentFragment
+    ) {
+      el.append(html);
+    } else if (Array.isArray(html)) {
+      el.append(...html);
+    } else {
+      el.insertAdjacentHTML('beforeend', html);
+    }
+  }
+  if (attributes) {
+    Object.entries(attributes).forEach(([key, val]) => {
+      el.setAttribute(key, val);
+    });
+  }
+  return el;
+}
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
