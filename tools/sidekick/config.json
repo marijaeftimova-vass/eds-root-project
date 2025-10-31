@@ -7,6 +7,13 @@
       "environments": ["edit"],
       "url": "/tools/sidekick/library.html",
       "includePaths": ["**/*.docx"]
+    },
+    {
+      "id": "accessibility-mode",
+      "title": "Accessibility Mode",
+      "environments": ["local", "preview", "dev"],
+      "event": "accessibility-mode",
+      "includePaths": ["**"]
     }
   ]
 }

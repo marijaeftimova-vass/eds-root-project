@@ -13,7 +13,11 @@ import {
   loadCSS,
 } from './aem.js';
 
+// eslint-disable-next-line import/no-cycle
+import initAccessibilityMode from '../tools/sidekick/plugins/accessibility-mode/accessibility-mode.js';
+
 const LCP_BLOCKS = []; // add your LCP blocks to the list
+let isA11yModeActive = false;
 
 export function createTag(tag, attributes, html) {
   const el = document.createElement(tag);
@@ -39,6 +43,46 @@ export function createTag(tag, attributes, html) {
 }
 
 /**
+ * create an element.
+ * @param {string} tagName the tag for the element
+ * @param {object} props properties to apply
+ * @param {string|Element} html content to add
+ * @returns the element
+ */
+export function createElement(tagName, props, html) {
+  const elem = document.createElement(tagName);
+  if (props) {
+    Object.keys(props).forEach((propName) => {
+      const val = props[propName];
+      if (propName === 'class') {
+        const classesArr = typeof val === 'string' ? [val] : val;
+        elem.classList.add(...classesArr);
+      } else {
+        elem.setAttribute(propName, val);
+      }
+    });
+  }
+
+  if (html) {
+    const appendEl = (el) => {
+      if (el instanceof HTMLElement || el instanceof SVGElement) {
+        elem.append(el);
+      } else {
+        elem.insertAdjacentHTML('beforeend', el);
+      }
+    };
+
+    if (Array.isArray(html)) {
+      html.forEach(appendEl);
+    } else {
+      appendEl(html);
+    }
+  }
+
+  return elem;
+}
+
+/**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
  */
@@ -46,11 +90,57 @@ function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
   // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+  if (
+    h1
+    && picture
+    && h1.compareDocumentPosition(picture)
+    && Node.DOCUMENT_POSITION_PRECEDING
+  ) {
     const section = document.createElement('div');
     section.append(buildBlock('hero', { elems: [picture, h1] }));
     main.prepend(section);
+  } else {
+    /* empty */
   }
+}
+
+const accessibilityMode = async (e) => {
+  const pluginButton = e.target.shadowRoot.querySelector('plugin-action-bar')
+    ? e.target.shadowRoot
+      .querySelector('plugin-action-bar')
+      .shadowRoot.querySelector('.accessibility-mode')
+    : e.target.shadowRoot.querySelector('.accessibility-mode > button');
+
+  isA11yModeActive = !isA11yModeActive;
+
+  if (isA11yModeActive) {
+    pluginButton.style.backgroundColor = '#4e9a17';
+    pluginButton.style.color = '#fff';
+  } else {
+    pluginButton.removeAttribute('style');
+  }
+  console.log('wait to initialaze acc mode');
+  document.querySelector('body').classList.toggle('accessibility-mode-active');
+  await initAccessibilityMode(isA11yModeActive);
+};
+
+let sk = document.querySelector('aem-sidekick')
+  || document.querySelector('helix-sidekick');
+
+if (sk) {
+  sk.addEventListener('plugin:accessibility-mode', accessibilityMode);
+} else {
+  document.addEventListener(
+    'sidekick-ready',
+    () => {
+      sk = document.querySelector('aem-sidekick')
+        || document.querySelector('helix-sidekick');
+      sk.addEventListener('plugin:accessibility-mode', accessibilityMode);
+    },
+    {
+      once: true,
+    },
+  );
 }
 
 /**
